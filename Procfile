@@ -1,1 +1,1 @@
-web: gunicorn zuka-charts.wsgi --log-file -
+"web: gunicorn zuka-charts.wsgi --log-file - " 
