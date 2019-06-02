@@ -1,6 +1,6 @@
 {
-  "name": "Zuka Charts",
-  "description": "A barebones Python app, which hopefully will be deployed to Heroku.",
+  "name": "Test for Zukacharts",
+  "description": "A barebones Python app, which can easily be deployed to Heroku.",
   "image": "heroku/python",
   "repository": "https://github.com/dabomb2654/online-charts",
   "keywords": ["python", "django" ],

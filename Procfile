@@ -1,1 +1,1 @@
-web: gunicorn zukacharts.wsgi --log-file -  
+web: gunicorn zukacharts.wsgi --log-file -
