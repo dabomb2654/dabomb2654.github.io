@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- A page for generating data charts based on data scraped from the takawiki -->
+	<!-- takawiki.com for the source -->
+	<title>ZukaCharts</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="C://Users//plane//Documents//GitHub//online-charts//misc//assets//main_page.css"
+</head>
+<body>
+	<!--body comment -->
+	<h1 id="title"> zuka charts </h1>
+	<h4 id="site-description"> a site to make charts of data compiled from the <a href="http://www.takawiki.com">takawiki</a></h4>
+	<!--<h5 id="text_example_intro"> like what? </h5>-->
+	<div id="checkboxes_troupe">
+		<form>
+			<h5 id="text_textboxes_troupe"> troupe </h5>
+			<label class="container_f">flower
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_sn">snow
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_m">moon
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_st">star
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_c">cosmos
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_se">senka
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+		</form>
+	</div>
+	<div id="dropdown_time_range">
+		<form>
+			<h5 id="text_dropdown_time_range"> time range </h5>
+			<div id="dropdown_time_one">
+				<select id="dropdown">
+					<option value="day">day</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<select id="dropdown">
+					<option value="month">month</option>
+					<option value="jan">january</option>
+					<option value="feb">february</option>
+					<option value="mar">march</option>
+					<option value="apr">april</option>
+					<option value="may">may</option>
+					<option value="jun">june</option>
+					<option value="jul">july</option>
+					<option value="aug">august</option>
+					<option value="sep">september</option>
+					<option value="oct">october</option>
+					<option value="nov">november</option>
+					<option value="dec">december</option>
+				</select>
+				<select id="dropdown">
+					<option value="year">year</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+				</select>
+			</div>
+			<h5 id="time_range_to"> to </h5>
+			<div id="dropdown_time_two">
+				<select id="dropdown">
+					<option value="day">day</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select>
+				<select id="dropdown">
+					<option value="month">month</option>
+					<option value="jan">january</option>
+					<option value="feb">february</option>
+					<option value="mar">march</option>
+					<option value="apr">april</option>
+					<option value="may">may</option>
+					<option value="jun">june</option>
+					<option value="jul">july</option>
+					<option value="aug">august</option>
+					<option value="sep">september</option>
+					<option value="oct">october</option>
+					<option value="nov">november</option>
+					<option value="dec">december</option>
+				</select>
+				<select id="dropdown">
+					<option value="year">year</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+					<option value="2002">2002</option>
+					<option value="2003">2003</option>
+					<option value="2004">2004</option>
+					<option value="2005">2005</option>
+					<option value="2006">2006</option>
+					<option value="2007">2007</option>
+					<option value="2008">2008</option>
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+				</select>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

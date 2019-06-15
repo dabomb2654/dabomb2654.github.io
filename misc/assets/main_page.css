@@ -1,0 +1,300 @@
+/*
+position: absolute;
+width: 570px;
+height: 120px;
+left: 15px;
+top: 54px;
+
+/* colors:
+sumire - #A244AF, hsl(293, 44%, 48%)
+senka - #5C508D, hsl(252, 28%, 43%)
+hana - #F489A1, hsl(347, 83%, 75%)
+tsuki - #F2D269, hsl(46, 84%, 68%)
+yuki - #A8D7C4, hsl(156, 37%, 75%)
+hoshi - #5ABCD8, hsl(193, 62%, 60%)
+sora - #E5C6DE, hsl(314, 37%, 84%)
+*/
+
+#title {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 72px;
+	margin-top: 1%;
+	margin-left: 0.5%;
+	color: #FFFFFF;
+	background: hsla(293, 44%, 48%, 100%);
+	border-radius: 30px 10px 30px 10px;
+
+	/*text-stroke: 2px solid #000000;*/
+}
+#site-description {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	margin-top: 1%;
+	margin-left: 0.5%;
+	color: #FFFFFF;
+	background: hsla(293, 44%, 48%, 75%);
+	border-radius: 20px 15px 20px 15px;
+}
+#text_example_intro{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	margin-top: 1%;
+	margin-left: 0.5%;
+	color: #FFFFFF;
+	margin-right:85%;
+	background: hsla(293, 44%, 48%, 50%);
+	border-radius: 15px;
+}
+#checkboxes_troupe{
+	width: 10%;
+	margin-left: 0.5%;
+	box-shadow: 0 0 0 2pt black;
+	border-radius: 15px;
+	float: left;
+	margin-right: 5%;
+}
+#text_textboxes_troupe{
+	font-family: 'Notp Sans JP', sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
+#dropdown_time_range{
+	width: 15%;
+	box-shadow: 0 0 0 2pt black;
+	border-radius: 15px;
+	float: left;
+	margin-right:5%;
+}
+#text_dropdown_time_range{
+	font-size: 20px;
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+#time_range_to{
+	font-size:16px;
+	text-align: center;
+	font-family: 'Noto Sans JP', sans-serif;
+
+}
+#dropdown{
+	font-size: 14px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+#dropdown_time_one, #dropdown_time_two{
+	text-align: center;
+}
+#dropdown_time_two{
+	padding-bottom: 20%;
+}
+.container_f, .container_m, .container_sn, .container_c, .container_se,.container_st {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: 'Noto Sans JP', sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container_se{
+	padding-bottom: 10%;
+}
+
+/* Hide the browser's default checkbox */
+.container_f input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_sn input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_m input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_st input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_c input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_se input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_f:hover input ~ .checkmark {
+  background-color: hsla(347, 83%, 75%, 40%);
+}
+.container_sn:hover input ~ .checkmark {
+  background-color: hsla(156, 37%, 75%, 40%);
+}
+.container_m:hover input ~ .checkmark {
+  background-color: hsla(46, 84%, 68%, 40%);
+}
+.container_st:hover input ~ .checkmark {
+  background-color: hsla(193, 62%, 60%, 40%);
+}
+.container_c:hover input ~ .checkmark {
+  background-color: hsla(314, 37%, 84%, 40%);
+}
+.container_se:hover input ~ .checkmark {
+  background-color: hsla(252, 28%, 43%, 40%);
+}
+
+/* When the checkbox is checked, add the correct full value background */
+.container_f input:checked ~ .checkmark {
+  background-color: hsla(347, 83%, 75%, 100%);
+}
+.container_sn input:checked ~ .checkmark {
+  background-color: hsla(156, 37%, 75%, 100%);
+}
+.container_m input:checked ~ .checkmark {
+  background-color:  hsla(46, 84%, 68%, 100%);
+}
+.container_st input:checked ~ .checkmark {
+  background-color: hsla(193, 62%, 60%, 100%);
+}
+.container_c input:checked ~ .checkmark {
+  background-color: hsla(314, 37%, 84%, 100%);
+}
+.container_se input:checked ~ .checkmark {
+  background-color: hsla(252, 28%, 43%, 100%);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_f input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_sn input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_m input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_st input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_c input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_se input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_f .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_sn .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_m .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_st .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_c .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_se .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
