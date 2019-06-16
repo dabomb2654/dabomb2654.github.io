@@ -1,7 +1,8 @@
 console.log("HEY! I WORK!");
 $(document).ready(function(){
-	var url = "https://github.com/dabomb2654/dabomb2654.github.io/blob/master/zuka_performances-performances2000.csv"; 
-	$.get(url, function(data){
-		console.log(data)
-	});
+	var reader = new FileReader();
+	reader.onload = function (){
+		document.getElementById('out').innerHTML=reader.result;
+	};
+	reader.readAsText('zuka_performances-performances2000.csv','utf8');
 });
