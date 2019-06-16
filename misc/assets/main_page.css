@@ -24,9 +24,7 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
 	margin-left: 0.5%;
 	color: #FFFFFF;
 	background: hsla(293, 44%, 48%, 100%);
-	border-radius: 30px 10px 30px 10px;
-
-	/*text-stroke: 2px solid #000000;*/
+	border-radius: 15px;
 }
 #site-description {
 	font-family: 'Noto Sans JP', sans-serif;
@@ -37,7 +35,7 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
 	margin-left: 0.5%;
 	color: #FFFFFF;
 	background: hsla(293, 44%, 48%, 75%);
-	border-radius: 20px 15px 20px 15px;
+	border-radius: 15px;
 }
 #text_example_intro{
 	font-family: 'Noto Sans JP', sans-serif;
@@ -57,42 +55,62 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
 	box-shadow: 0 0 0 2pt black;
 	border-radius: 15px;
 	float: left;
-	margin-right: 5%;
+	margin-right: 2%;
+  min-width: 175px;
+  padding-left: 1%;
 }
-#text_textboxes_troupe{
+#text_textboxes_troupe, #text_dropdown_time_range, #text_dropdown_staff, #text_dropdown_performer, #text_checkbox_revival, #text_dropbox_genre{
 	font-family: 'Notp Sans JP', sans-serif;
 	font-size: 20px;
 	text-align: center;
 }
-#dropdown_time_range{
+
+#dropdown_time_range, #dropdown_staff_group, #dropdown_performer_group, #checkbox_revival, #pillbox_genre{
 	width: 15%;
 	box-shadow: 0 0 0 2pt black;
 	border-radius: 15px;
 	float: left;
-	margin-right:5%;
+	margin-right:2%;
+  margin-bottom: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
 }
-#text_dropdown_time_range{
-	font-size: 20px;
-	text-align: center;
-	font-family: 'Noto Sans JP', sans-serif;
+#dropdown_time_range{
+  min-width: 215px;
+  max-width: 260%
+}
+#dropdown_staff_group{
+  min-width: 165px;
+  max-width: 240px;
+}
+#dropdown_performer_group{
+  min-width: 190px;
 }
 #time_range_to{
 	font-size:16px;
 	text-align: center;
 	font-family: 'Noto Sans JP', sans-serif;
-
 }
-#dropdown{
+#dropdown_day1, #dropdown_day2, #dropdown_month1, #dropdown_month2, #dropdown_year1, #dropdown_year2, #dropdown_staff,#dropdown_dir, #dropdown_aut, #dropdown_cho, #dropdown_com, #dropdown_ts, #dropdown_tm, #dropdown_lead, #dropdown_genre{
 	font-size: 14px;
 	font-family: 'Noto Sans JP', sans-serif;
+  box-shadow: 0 0 0 1pt black;
+  border-radius: 10px;
+}
+#dropdown_dir, #dropdown_aut, #dropdown_cho, #dropdown_com, #dropdown_ts, #dropdown_tm, #dropdown_lead{
+  display: block;
 }
 #dropdown_time_one, #dropdown_time_two{
 	text-align: center;
 }
 #dropdown_time_two{
-	padding-bottom: 20%;
+	padding-bottom: 22%;
 }
-.container_f, .container_m, .container_sn, .container_c, .container_se,.container_st {
+#pillbox_genre{
+  text-align: center;
+  padding-bottom: 2%;
+}
+.container_f, .container_m, .container_sn, .container_c, .container_se,.container_st,.container_revival_yes, .container_revival_no{
   display: block;
   position: relative;
   padding-left: 35px;
@@ -152,6 +170,20 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
   height: 0;
   width: 0;
 }
+.container_revival_no input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.container_revival_yes input {
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 
 /* Create a custom checkbox */
 .checkmark {
@@ -183,6 +215,12 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
 .container_se:hover input ~ .checkmark {
   background-color: hsla(252, 28%, 43%, 40%);
 }
+.container_revival_yes:hover input ~ .checkmark {
+  background-color: hsla(293, 44%, 48%, 55%);
+}
+.container_revival_no:hover input ~ .checkmark {
+  background-color: hsla(293, 44%, 48%, 55%);
+}
 
 /* When the checkbox is checked, add the correct full value background */
 .container_f input:checked ~ .checkmark {
@@ -202,6 +240,12 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
 }
 .container_se input:checked ~ .checkmark {
   background-color: hsla(252, 28%, 43%, 100%);
+}
+.container_revival_yes input:checked ~ .checkmark {
+  background-color: hsla(293, 44%, 48%, 100%);
+}
+.container_revival_no input:checked ~ .checkmark {
+  background-color: hsla(293, 44%, 48%, 100%);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -228,6 +272,12 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
   display: block;
 }
 .container_se input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_revival_no input:checked ~ .checkmark:after {
+  display: block;
+}
+.container_revival_yes input:checked ~ .checkmark:after {
   display: block;
 }
 
@@ -288,6 +338,28 @@ sora - #E5C6DE, hsl(314, 37%, 84%)
   transform: rotate(45deg);
 }
 .container_se .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_revival_yes .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.container_revival_no .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;

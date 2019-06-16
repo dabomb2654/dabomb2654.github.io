@@ -5,7 +5,9 @@
 	<!-- takawiki.com for the source -->
 	<title>ZukaCharts</title>
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="C://Users//plane//Documents//GitHub//online-charts//misc//assets//main_page.css"
+	<link rel="stylesheet" type="text/css" href="C://Users//plane//Documents//GitHub//online-charts//misc//assets//main_page.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="main_page.js"></script>
 </head>
 <body>
 	<!--body comment -->
@@ -45,7 +47,7 @@
 		<form>
 			<h5 id="text_dropdown_time_range"> time range </h5>
 			<div id="dropdown_time_one">
-				<select id="dropdown">
+				<select id="dropdown_day1">
 					<option value="day">day</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -79,7 +81,7 @@
 					<option value="30">30</option>
 					<option value="31">31</option>
 				</select>
-				<select id="dropdown">
+				<select id="dropdown_month1">
 					<option value="month">month</option>
 					<option value="jan">january</option>
 					<option value="feb">february</option>
@@ -94,7 +96,7 @@
 					<option value="nov">november</option>
 					<option value="dec">december</option>
 				</select>
-				<select id="dropdown">
+				<select id="dropdown_year1">
 					<option value="year">year</option>
 					<option value="2000">2000</option>
 					<option value="2001">2001</option>
@@ -119,7 +121,7 @@
 			</div>
 			<h5 id="time_range_to"> to </h5>
 			<div id="dropdown_time_two">
-				<select id="dropdown">
+				<select id="dropdown_day2">
 					<option value="day">day</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -153,7 +155,7 @@
 					<option value="30">30</option>
 					<option value="31">31</option>
 				</select>
-				<select id="dropdown">
+				<select id="dropdown_month2">
 					<option value="month">month</option>
 					<option value="jan">january</option>
 					<option value="feb">february</option>
@@ -168,7 +170,7 @@
 					<option value="nov">november</option>
 					<option value="dec">december</option>
 				</select>
-				<select id="dropdown">
+				<select id="dropdown_year2">
 					<option value="year">year</option>
 					<option value="2000">2000</option>
 					<option value="2001">2001</option>
@@ -191,6 +193,59 @@
 					<option value="2018">2018</option>
 				</select>
 			</div>
+		</form>
+	</div>
+	<div id="dropdown_staff_group">
+		<h5 id="text_dropdown_staff">staff</h5>
+		<select id="dropdown_dir"> 
+				<option id="director">director</option>
+		</select>
+		<br>
+		<select id="dropdown_aut">
+				<option id="author">author</option>
+		</select>
+		<br>
+		<select id="dropdown_cho">
+				<option id="choreographer">choreographer</option>
+		</select>
+		<br>
+		<select id="dropdown_com">
+				<option id="composer">composer</option>
+		</select>
+		<br>
+	</div>
+	<div id="dropdown_performer_group">
+		<h5 id="text_dropdown_performer">performer</h5>
+		<select id="dropdown_ts">
+				<option id="ts">top star</option>
+		</select>
+		<br>
+		<select id="dropdown_tm">
+				<option id="tm">top musumeyaku</option>
+		</select>
+		<br>
+		<select id="dropdown_lead">
+				<option id="lead">lead</option>
+		</select>
+		<br>
+	</div>
+	<div id="pillbox_genre">
+		<h5 id="text_dropbox_genre"> genre </h5>
+		<select id="dropdown_genre">
+				<option id="genre">genre</option>
+		</select>
+	</div>
+	<div id="checkbox_revival">
+		<h5 id="text_checkbox_revival">revival</h5>
+		<form>
+			<label class="container_revival_yes">yes
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
+			<label class="container_revival_no">no
+  				<input type="checkbox">
+  				<span class="checkmark"></span>
+			</label>
 		</form>
 	</div>
 </body>
